@@ -1,4 +1,4 @@
 twihute
 =======
 
-Twihute
+GitHub is awesome
