@@ -27,6 +27,25 @@ class Project {
 		return $projects;
 	}
 	
+	function loadProject($id){
+		$project;
+		$i = 0;
+		$results = mysql_query("SELECT * FROM project WHERE id = $id");
+		while ($row = mysql_fetch_array($results)){
+			$project = new Project();
+			$project->setProjectName($row['project_name']);
+			$project->setCooperativeName($row['cooperative_name']);
+			$project->setDescription($row['description']);
+			$project->setAmount($row['amount']);
+			$project->setId($row['id']);
+			
+		}
+		
+		//echo $project->getProjectName();
+	
+		return $project;
+	}
+	
 	function setProjectName($name){
 		$this->projectName = $name;		
 	}
