@@ -21,7 +21,7 @@ while ($i < $len){
       <img style = "width:200px" class="media-object" src="donations/content/girinka.jpg" alt="...">
     </a>
     <div class="media-body">
-      <h4 class="media-heading"><?php echo $proj->getProjectName()?></h4>
+      <h4 class="media-heading"><a href = "?page=discoverproject&open=<?php echo $proj->getId()?>"><?php echo $proj->getProjectName()?></a></h4>
       <?php echo $proj->getDescription()?>
     </div>
     <div style = "font-weight:bold; margin-left:200px">

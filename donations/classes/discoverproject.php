@@ -1,6 +1,7 @@
 <?php
 
 class Project {
+	private $id;
 	private $cooperativeName;
 	private $projectName;
 	private $description;
@@ -19,6 +20,7 @@ class Project {
 			$projects[$i]->setCooperativeName($row['cooperative_name']);
 			$projects[$i]->setDescription($row['description']);
 			$projects[$i]->setAmount($row['amount']);
+			$projects[$i]->setId($row['id']);
 			$i++;
 		}
 		
@@ -37,6 +39,9 @@ class Project {
 	function setAmount($amount){
 		$this->amount = $amount;
 	}
+	function setId($id){
+		$this->id = $id;
+	}
 	
 	
 	function getProjectName(){
@@ -50,6 +55,9 @@ class Project {
 	}
 	function getAmount(){
 		return $this->amount;
+	}
+	function getId(){
+		return $this->id;
 	}
 	
 	
