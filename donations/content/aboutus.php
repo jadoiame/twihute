@@ -1,4 +1,4 @@
-<div class = "container">
+<div class = "container" style = "padding-left:30px; padding-right:30px">
 
 <h2>About</h2>
 
