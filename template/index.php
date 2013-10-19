@@ -62,6 +62,7 @@ include 'template/donation/index.php';
 <div class = "pull-right">Copyright © 2013 Twihute All Rights Reserved</div>
 </div>
 
+<br><Br><Br>
 
 
 </footer>
