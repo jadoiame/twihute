@@ -1,7 +1,8 @@
 <div class = "container" style = "">
-<div class = "navbar navbar-inverse navbar-fixed-top">
+<div class = "navbar navbar-fixed-top">
+<div class = "container">
 <div class = "navbar-brand" style = "margin-right:100px">
-<a href = "/"><img src = "" style = ""><span style = "color:white; font-size:26px; margin:0px; padding:0px">Twihute</span></a>
+<a href = "/"><img src = "donations/content/twihute.png" style = ""></a>
 </div>
 
 
@@ -23,6 +24,7 @@
       
     </ul>
 
+</div>
 </div>
 </div>
 
