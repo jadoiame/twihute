@@ -2,17 +2,30 @@
 <div class = "container" style = "padding-left:30px; padding-right:30px">
 
 <ul class="media-list">
+
+
+<?php 
+include 'donations/classes/discoverproject.php';
+$project = new Project();
+$projects = $project->loadProjects();
+
+$len = count($projects);
+$i = 0;
+
+while ($i < $len){
+   $proj = $projects[$i];
+?>
   <li class="media">
   
     <a class="pull-left" href="#">
       <img style = "width:200px" class="media-object" src="donations/content/girinka.jpg" alt="...">
     </a>
     <div class="media-body">
-      <h4 class="media-heading">Girinka program</h4>
-      There were two different rumors about One Cow per Poor Family Program. One was that it is helping Rwandan farmers to earn better livelihoods and another was about the burdens people carried as a result of receiving these cows. This made me tour some villages from Nyamagabe and Huye districts to ensure the validity of these statements.
+      <h4 class="media-heading"><?php echo $proj->getProjectName()?></h4>
+      <?php echo $proj->getDescription()?>
     </div>
     <div style = "font-weight:bold; margin-left:200px">
-   <br>    Goal: 	    <span class="badge">1,200,000 Rwf</span>
+   <br>    Goal: 	    <span class="badge"><?php echo number_format($proj->getAmount())?></span>
 	  &nbsp&nbsp&nbsp&nbsp
 	Raised:  <span class="badge">600,000 Rwf</span> 
 	    
@@ -46,30 +59,12 @@
 	
     </form>
     </Div>
+    <hr>
   </li>
-  <hr>
-  <li class="media">
-    <a class="pull-left" href="#">
-      <img style = "width:200px" class="media-object" src="donations/content/rssp.jpg" alt="...">
-    </a>
-    <div class="media-body">
-      <h4 class="media-heading">Rural Sector Support Project</h4>
-      order to achieve this program the government of Rwanda and the Ministry of Agriculture and Animal resources instituted the Rural Sector Support Project which aims at revitalizing the rural economy and improving the quality of life of the rural poor through increased transfer of technical financial resources for the sustainable rural development. This project has to sustain poverty reduction through capacity building to facilitate efficient application of resources to the development and management of investments.
-      .
-    </div>
-    <br>
-   <div style = "font-weight:bold; margin-left:200px">
-   <br>    Goal: 	    <span class="badge">10,00,000 Rwf</span>
-	  &nbsp&nbsp&nbsp&nbsp
-	Raised:  <span class="badge">0 Rwf</span> 
-	    
-	    
-	  <button class = "btn btn-success pull-right btn-small">Invest</button>
-	</div>
-    <Div class = "pull-right" style = "widht:100%">    
-    
-    </Div>
-    
-  </li>
+ 
+  <?php 
+  $i++;
+  }
+  ?>
 </ul>
 </div>
