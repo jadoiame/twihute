@@ -3,8 +3,8 @@ include 'donations/classes/discoverproject.php';
 $project = new Project();
 $id = $_GET['open'];
 //echo $id;
-$project->loadProject($id);
-echo $project->getProjectName();
+$pr = $project->loadProject($id);
+
 ?>
 
 <div class = "container">
@@ -12,8 +12,8 @@ echo $project->getProjectName();
 
 
 <div class = "col-lg-6">
-<h3><?php echo $project->getProjectName()?></h3>
-<p><?php echo $project->getDescription()?> </p>
+<h3><?php echo $pr->getProjectName()?></h3>
+<p><?php echo $pr->getDescription()?> </p>
 
 </div>
 
