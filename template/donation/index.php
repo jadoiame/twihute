@@ -1,7 +1,7 @@
 <div class = "container" style = "">
-<div class = "navbar navbar-fixed-top">
+<div class = "navbar">
 <div class = "container">
-<div class = "navbar-brand" style = "margin-right:100px; padding:0px; background:yellow">
+<div class = "navbar-brand" style = "margin-right:100px; padding:10px;">
 <a href = "/"><img src = "donations/content/twihute.png" style = ""></a>
 </div>
 
@@ -17,7 +17,7 @@
 <div class="nav-collapse collapse navbar-responsive-collapse" style = "">
 
 <ul class="nav navbar-nav">
-      <li class="<?php if (!isset($_GET['page'])){echo "active";}?>"><a href="/">Home</a></li>
+      <li class="<?php if (!isset($_GET['page'])){echo "";}?>"><a href="/">Home</a></li>
       <li class="<?php if ($_GET['page'] == 'aboutus'){echo "active";}?>"><a href="?page=aboutus">What is Twihute</a></li>
       <li class="<?php if ($_GET['page'] == 'discoverproject'){echo "active";}?>"><a href="?page=discoverproject">Discover projects</a></li>
       <li class="<?php if ($_GET['page'] == 'startproject'){echo "active";}?>"><a href="?page=startproject">Start a project</a></li>
@@ -27,9 +27,10 @@
 </div>
 </div>
 </div>
+</div>
 
 
-<div style = "margin-top:80px">
+<div style = "margin-top:0px">
 
 
 <?php 
@@ -57,5 +58,4 @@ else{
 
 
 
-</div>
 

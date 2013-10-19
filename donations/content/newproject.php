@@ -1,3 +1,5 @@
+<div class = "container">
+
 <form method = post>
 <div class = panel>
 <div class = panel-heading style = "">
@@ -43,3 +45,4 @@
 </div>
 
 </form>
+</div>

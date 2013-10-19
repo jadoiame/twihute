@@ -1,3 +1,5 @@
+<div class = "container">
+
 <h2>About</h2>
 
 
@@ -8,3 +10,4 @@ But after all this archieved, Twihute doesn't stop at just donating money to the
 
 <br>
 <br><br><br><br><br><br><br><br><br><br>
+</div>

@@ -1,5 +1,5 @@
 
-
+<div class = "container">
 
 <ul class="media-list">
   <li class="media">
@@ -72,3 +72,4 @@
     
   </li>
 </ul>
+</div>
