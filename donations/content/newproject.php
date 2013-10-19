@@ -1,6 +1,6 @@
 <?php 
 if (isset($_POST['newproject'])){
-	echo "Creation of the new project";
+	
 	include 'donations/classes/newproject.php';
 	$project = new Project();
 	$project->setCooperativeName($_POST['cooperativename']);
@@ -9,6 +9,8 @@ if (isset($_POST['newproject'])){
 	$project->setAmount($_POST['amount']);
 	$project->setPhone($_POST['phone']);
 	$project->createProject();
+	
+	echo "<div class = 'container'><div class = 'alert alert-success'>You have successfully created a new project. Thank you!</div></div>";
 }
 ?>
 
