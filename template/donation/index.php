@@ -1,7 +1,7 @@
 <div class = "container" style = "">
 <div class = "navbar navbar-fixed-top">
 <div class = "container">
-<div class = "navbar-brand" style = "margin-right:100px">
+<div class = "navbar-brand" style = "margin-right:100px; padding:0px; background:yellow">
 <a href = "/"><img src = "donations/content/twihute.png" style = ""></a>
 </div>
 
