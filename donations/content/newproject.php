@@ -1,6 +1,18 @@
+<?php 
+if (isset($_POST['newproject'])){
+	echo "Creation of the new project";
+	include 'donations/classes/newproject.php';
+}
+?>
+
+
+
 <div class = "container" style = "padding-left:30px; padding-right:30px">
 
 <form method = post>
+
+<input type = "hidden" name = newproject value = true >
+
 <div class = panel>
 <div class = panel-heading style = "">
 <h3 style = "margin:0px; padding:0px">Please fill the form below</h3>
