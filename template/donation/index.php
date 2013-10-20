@@ -19,7 +19,7 @@
 <!-- <ul class="nav navbar-nav pull-right" style="margin-right: 100px;">
       <li class="<?php if (!isset($_GET['page'])){echo "";}?>"><a href="/">Home</a></li>
       <li class="<?php if ($_GET['page'] == 'aboutus'){echo "active";}?>"><a href="?page=aboutus">What is Twihute</a></li>
-      <li class="<?php if ($_GET['page'] == 'discoverproject'){echo "active";}?>"><a href="?page=discoverproject">Discover projects</a></li>
+      <li class="<?php if ($_GET['page'] == 'discoverproject' AND !isset($_GET['open'])){echo "active";}?>"><a href="?page=discoverproject">Discover projects</a></li>
       <li class="<?php if ($_GET['page'] == 'startproject'){echo "active";}?>"><a href="?page=startproject">Start a project</a></li>
       
     </ul>-->
