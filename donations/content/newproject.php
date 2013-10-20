@@ -8,9 +8,11 @@ if (isset($_POST['newproject'])){
 	$project->setDescription($_POST['description']);
 	$project->setAmount($_POST['amount']);
 	$project->setPhone($_POST['phone']);
-	$project->createProject();
+	$id = $project->createProject();
 	
-	echo "<div class = 'container'><div class = 'alert alert-success'>You have successfully created a new project. Thank you!</div></div>";
+	
+	
+	echo "<div class = 'container'><div class = 'alert alert-success'>You have successfully created a new project. Thank you! <a href = '?page=discoverproject&open=$id'>Continue</a> to your project</div></div>";
 }
 ?>
 

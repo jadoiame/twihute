@@ -18,18 +18,27 @@ while ($i < $len){
   <li class="media">
   
     <a class="pull-left" href="#">
-      <img style = "width:200px" class="media-object" src="donations/content/girinka.jpg" alt="...">
+      <img style = "width:200px" class="media-object" src="donations/content/img/<?php echo $proj->getProjectImage()?>" alt="...">
     </a>
     <div class="media-body">
       <h4 class="media-heading"><a href = "?page=discoverproject&open=<?php echo $proj->getId()?>"><?php echo $proj->getProjectName()?></a></h4>
+      
+      <div><span style = "color:gray">By: </span><span style = "font-weight:bold"><?php echo $proj->getCooperativeName()?></span></div>
+ 	<br>	  
+       
+      
       <?php echo $proj->getDescription()?>
     </div>
+    
+    
+    
+    
     <div style = "font-weight:bold; margin-left:200px">
    <br>    Goal: 	    <span class="badge"><?php echo number_format($proj->getAmount())?></span>
 	  &nbsp&nbsp&nbsp&nbsp
 	Raised:  <span class="badge">600,000 Rwf</span> 
 	    
-	    
+	
 	  <button class = "btn btn-success pull-right btn-small" onclick = "$('#pledge').show('slow')">Invest</button>
 	</div>
 	<br><br>
