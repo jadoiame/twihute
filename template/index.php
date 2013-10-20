@@ -56,7 +56,11 @@
 include 'template/donation/index.php';
 ?>
 </div>
+<<<<<<< HEAD
 <footer style = "position:relative; width:100%; bottom:0px;background-color: white; color:back;">
+=======
+<footer style = "position:relative; width:100%; bottom:0px;color:back;">
+>>>>>>> 9aae6928953b5ec18efa07af50670d94b064db9b
 
 <div class = "container">
 <div class = "pull-right">Copyright © 2013 Twihute All Rights Reserved</div>
