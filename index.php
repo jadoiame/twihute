@@ -12,7 +12,7 @@ if (isset($_POST['language'])){
 	$_SESSION['language1'] = $_POST['lang'];
 }
 
-//include 'scripts/connect_to_mysql.php';
+include 'scripts/connect_to_mysql.php';
 include 'scripts/languages.php';
 $success = true;
 if (isset($_POST['function'])){

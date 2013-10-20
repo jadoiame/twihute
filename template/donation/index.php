@@ -39,7 +39,12 @@ if (isset($_GET['page'])){
 		include 'donations/content/newproject.php';
 	}
 	if ($_GET['page'] == 'discoverproject'){
-		include 'donations/content/discoverproject.php';
+		if (isset($_GET['open'])){
+			include 'donations/content/projectprofile.php';
+		}
+		else{
+			include 'donations/content/discoverproject.php';
+		}
 	}
 	if ($_GET['page'] == 'aboutus'){
 		include 'donations/content/aboutus.php';
