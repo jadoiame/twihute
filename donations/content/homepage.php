@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-<div class="jumbotron"  style = "background:url('template/donation/photo.jpg'); background-size:cover; height:700px;">
-  <div class="container" style = "color:white; text-shadow: 1px 1px 5px #000, 1px 1px 5px black;">
-    <h1></h1>
-    <p style = "font-size:45px; width: 688px; height: 58px; margin-left: 300px; font-family: Helvetica Neue, helvetica, sans-serif;">Financially Inspiring Agriculture.</p>
-=======
 <div class="jumbotron"  style = "background:url('template/donation/photo.jpg'); background-size:cover;">
   <div class="container" style = "color:white; text-align:center">
     <h1 style = "font-size:45px">
     Financially Inspiring Agriculture.
 	</h1>
->>>>>>> 9aae6928953b5ec18efa07af50670d94b064db9b
+
 	<br />
 	<br />
     <a class = "btn btn-success btn-large" href="?page=discoverproject" style = "background:#76cc1e; border-radius:60px; font-size:26px;">Discover Projects</a>
