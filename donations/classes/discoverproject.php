@@ -2,6 +2,7 @@
 
 class Project {
 	private $id;
+	private $profileImage = '';
 	private $cooperativeName;
 	private $projectName;
 	private $description;
@@ -21,6 +22,7 @@ class Project {
 			$projects[$i]->setDescription($row['description']);
 			$projects[$i]->setAmount($row['amount']);
 			$projects[$i]->setId($row['id']);
+			$projects[$i]->setProfileImage($row['profile_img']);
 			$i++;
 		}
 		
@@ -38,6 +40,7 @@ class Project {
 			$project->setDescription($row['description']);
 			$project->setAmount($row['amount']);
 			$project->setId($row['id']);
+			$project->setProfileImage($row['profile_img']);
 			
 		}
 		
@@ -45,6 +48,15 @@ class Project {
 	
 		return $project;
 	}
+	function saveProject(){
+		mysql_query("UPDATE project SET project_name = '$this->projectName', description = '$this->description', profile_img = '$this->profileImage' WHERE id = $this->id");
+	}
+		
+	function deleteProject(){
+		mysql_query("DELETE FROM project WHERE id = $this->id");
+	}
+	
+	
 	
 	function setProjectName($name){
 		$this->projectName = $name;		
@@ -60,6 +72,14 @@ class Project {
 	}
 	function setId($id){
 		$this->id = $id;
+	}
+	function setUploadedProfileImage($image){		
+		$thumbnail = $_FILES['projectimage']['name'];
+		$c = copy($_FILES['projectimage']['tmp_name'], "donations/content/img/".$thumbnail);
+		$this->profileImage = $thumbnail;		
+	}
+	function setProfileImage($image){
+		$this->profileImage = $image;
 	}
 	
 	
@@ -78,6 +98,10 @@ class Project {
 	function getId(){
 		return $this->id;
 	}
+	function getProjectImage(){
+		return $this->profileImage;
+	}
+	
 	
 	
 	

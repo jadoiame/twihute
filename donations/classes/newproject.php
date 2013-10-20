@@ -16,6 +16,12 @@ class Project {
 	function createProject(){
 		mysql_query("INSERT INTO project(cooperative_name, project_name, description, amount, phone_contact) 
 				                         VALUES('$this->cooperativeName', '$this->projectName', '$this->description', $this->amount, '$this->phone')") or die(mysql_error());
+		$results = mysql_query("SELECT id FROM project ORDER BY id DESC");
+		$id = -1;
+		while ($row = mysql_fetch_array($results)){
+			$id = $row['id'];
+		}
+		return $id;
 	}
 	function loadProject($id){
 		$results = mysql_query("SELECT * FROM project WHERE id = $id");
