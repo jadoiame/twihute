@@ -45,7 +45,7 @@ while ($i < $len){
     <div id = pledge<?php echo $i?> class = "well pull-right col-lg-6" style = "display:none; margin-top:-100px">    
     <div class = "panel-heading"><h3 style = "margin:0px; padding:0px">My pledge</h3></div>
     <form method = post>
-    <label>Names</label>
+    <label>Your full name</label>
     <div class="input-group input-group-lg">
 	    <span class = "input-group-addon"></span>
 		<input name = names type="text" class="form-control input-lg" placeholder="Names">
