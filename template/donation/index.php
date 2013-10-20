@@ -1,8 +1,8 @@
 <div class = "container" style = "">
 <div class = "navbar">
 <div class = "container">
-<div class = "navbar-brand" style = "margin-left:500px; padding:10px;">
-<a style="font-size: 50px; color: #76cc1e; font-weight: bold; "href = "/">twihute</a>
+<div class = "navbar-brand" style = "margin-left:500px; padding:15px;">
+<a style="font-size: 50px; color: #76cc1e; font-weight: bold; "href = "/">Twihute</a>
 </div>
 
 
@@ -39,12 +39,7 @@ if (isset($_GET['page'])){
 		include 'donations/content/newproject.php';
 	}
 	if ($_GET['page'] == 'discoverproject'){
-		if (isset($_GET['open'])){
-			include 'donations/content/projectprofile.php';
-		}
-		else{
-			include 'donations/content/discoverproject.php';
-		}
+		include 'donations/content/discoverproject.php';
 	}
 	if ($_GET['page'] == 'aboutus'){
 		include 'donations/content/aboutus.php';

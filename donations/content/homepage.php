@@ -1,4 +1,4 @@
-<div class="jumbotron"  style = "background:url('template/donation/photo.jpg'); background-size:cover; height:900px;">
+<div class="jumbotron"  style = "background:url('template/donation/photo.jpg'); background-size:cover; height:700px;">
   <div class="container" style = "color:white; text-shadow: 1px 1px 5px #000, 1px 1px 5px black;">
     <h1></h1>
     <p style = "font-size:45px; width: 688px; height: 58px; margin-left: 300px; font-family: Helvetica Neue, helvetica, sans-serif;">Financially Inspiring Agriculture.</p>
