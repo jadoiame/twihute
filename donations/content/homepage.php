@@ -36,7 +36,7 @@ Popular projects:
 <?php 
 include 'donations/classes/discoverproject.php';
 $project = new Project();
-$projects = $project->loadProjects();
+$projects = $project->sortProjects();
 
 $len = count($projects);
 $i = 0;
@@ -58,7 +58,7 @@ while ($i < $len){
       <div class="caption">
         <h3><?php echo $proj->getProjectName()?></h3>
         <p style = "height:40px; overflow:hidden"><?php echo $proj->getDescription()?></p>
-        <p><a href="?page=discoverproject&open=<?php echo $proj->getId()?>" class="btn btn-success">Read more...</a></p>
+        <p><a href="?page=discoverproject&open=<?php echo $proj->getId()?>" class="btn btn-success">The story <span class="glyphicon glyphicon-ok"></span></a></p>
       </div>
     </div>
   </div>

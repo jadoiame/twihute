@@ -1,10 +1,34 @@
 
 <div class = "container" style = "padding-left:30px; padding-right:30px">
 
+<?php 
+include 'donations/classes/investor.php';
+if (isset($_POST['newpledge'])){
+	$names = $_POST['names'];
+	$project = $_POST['project'];
+	$amount = $_POST['amount'];
+	$email = $_POST['email'];
+	$phone = $_POST['phone'];
+	
+	
+	$investor = new Investor();
+	$investor->setNames($names);
+	$investor->setProject($project);
+	$investor->setAmount($amount);
+	$investor->setEmail($email);
+	$investor->setPhone($phone);
+	
+	$investor->createInvestor();
+	echo "<div class = ''><div class = 'alert alert-success'>Your pledge submission was created successfully. Thank you!</div></div>";
+}
+?>
+
+
 <ul class="media-list">
 
 
 <?php 
+
 include 'donations/classes/discoverproject.php';
 $project = new Project();
 $projects = $project->loadProjects();
@@ -34,17 +58,19 @@ while ($i < $len){
     
     
     <div style = "font-weight:bold; margin-left:200px">
-   <br>    Goal: 	    <span class="badge"><?php echo number_format($proj->getAmount())?></span>
+   <br>    Goal: 	    <span class="badge"><?php echo number_format($proj->getAmount())?> Rwf</span>
 	  &nbsp&nbsp&nbsp&nbsp
-	Raised:  <span class="badge">600,000 Rwf</span> 
+	Raised:  <span class="badge"><?php echo number_format($proj->getRaisedAmount())?> Rwf</span> 
 	    
 	
-	  <button class = "btn btn-success pull-right btn-small" onclick = "$('#pledge<?php echo $i?>').show('slow')">Invest</button>
+	  <button class = "btn btn-success pull-right btn-small" onclick = "$('#pledge<?php echo $i?>').show('slow')">Fund</button>
 	</div>
 	<br><br>
-    <div id = pledge<?php echo $i?> class = "well pull-right col-lg-6" style = "display:none; margin-top:-100px">    
+    <div id = pledge<?php echo $i?> class = "well pull-right col-lg-6" style = "position:absolute; right:5%;display:none; margin-top:-100px">    
     <div class = "panel-heading"><h3 style = "margin:0px; padding:0px">My pledge</h3></div>
     <form method = post>
+    <input type = hidden name = newpledge value = true>
+    <input type = hidden name = project value = <?php echo $proj->getId()?>>
     <label>Your full name</label>
     <div class="input-group input-group-lg">
 	    <span class = "input-group-addon"></span>
@@ -53,7 +79,12 @@ while ($i < $len){
 	<label>Email</label>
     <div class="input-group input-group-lg">
 	    <span class = "input-group-addon"></span>
-		<input name = email type="text" class="form-control input-lg" placeholder="Email">
+		<input name = email type="text" class="form-control input-lg" placeholder="Email address">
+	</div>
+	<label>Phone</label>
+    <div class="input-group input-group-lg">
+	    <span class = "input-group-addon"></span>
+		<input name = phone type="text" class="form-control input-lg" placeholder="Phone number">
 	</div>
 	<label>Amount</label>
     <div class="input-group input-group-lg">
@@ -62,7 +93,7 @@ while ($i < $len){
 	</div>
 	<hr>
 	
-	<input class = "btn btn-success" type = submit value = "Invest">
+	<input class = "btn btn-success" type = submit value = "Fund">
 	
 	<input class = "btn btn-primary" type = button value = "Cancel" onclick = "$('#pledge<?php echo $i?>').hide('slow')">
 	
