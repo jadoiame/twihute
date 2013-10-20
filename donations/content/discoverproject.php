@@ -39,32 +39,32 @@ while ($i < $len){
 	Raised:  <span class="badge">600,000 Rwf</span> 
 	    
 	
-	  <button class = "btn btn-success pull-right btn-small" onclick = "$('#pledge').show('slow')">Invest</button>
+	  <button class = "btn btn-success pull-right btn-small" onclick = "$('#pledge<?php echo $i?>').show('slow')">Invest</button>
 	</div>
 	<br><br>
-    <div id = pledge class = "panel pull-right" style = "display:none">    
-    <div class = "panel-heading">Invest</div>
+    <div id = pledge<?php echo $i?> class = "well pull-right col-lg-6" style = "display:none; margin-top:-100px">    
+    <div class = "panel-heading"><h3 style = "margin:0px; padding:0px">My pledge</h3></div>
     <form method = post>
     <label>Names</label>
     <div class="input-group input-group-lg">
-	  
-		<input type="text" class="form-control input-lg" placeholder="Names">
+	    <span class = "input-group-addon"></span>
+		<input name = names type="text" class="form-control input-lg" placeholder="Names">
 	</div>
 	<label>Email</label>
     <div class="input-group input-group-lg">
-	  
-		<input type="text" class="form-control input-lg" placeholder="Email">
+	    <span class = "input-group-addon"></span>
+		<input name = email type="text" class="form-control input-lg" placeholder="Email">
 	</div>
 	<label>Amount</label>
     <div class="input-group input-group-lg">
-	  
-		<input type="text" class="form-control input-lg" placeholder="Amount">
+	    <span class = "input-group-addon"></span>
+		<input name = amount type="text" class="form-control input-lg" placeholder="Amount">
 	</div>
 	<hr>
 	
 	<input class = "btn btn-success" type = submit value = "Invest">
 	
-	<input class = "btn btn-primary" type = button value = "Cancel" onclick = "$('#pledge').hide('slow')">
+	<input class = "btn btn-primary" type = button value = "Cancel" onclick = "$('#pledge<?php echo $i?>').hide('slow')">
 	
     </form>
     </Div>

@@ -40,7 +40,7 @@
 
 <title>Twihute</title>
 
-<link REL = "SHORTCUT ICON" HREF = "template/yego/favicon.ico">
+<link REL = "SHORTCUT ICON" HREF = "">
 
 
 
@@ -61,7 +61,7 @@ include 'template/donation/index.php';
 
 
 <div class = "container">
-<div class = "pull-right">Copyright © 2013 Twihute All Rights Reserved</div>
+<div class = "" style = "text-align:center">Copyright © 2013 Twihute All Rights Reserved</div>
 </div>
 
 <br>

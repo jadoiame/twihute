@@ -24,3 +24,58 @@
 	<div class = col-lg-2></div>
   </div>
 </div>
+
+<div class = container>
+
+<div style = "font-weight:bold; color:gray; font-size:18px">
+Popular projects:
+</div>
+<hr>
+
+<div class="row">
+<?php 
+include 'donations/classes/discoverproject.php';
+$project = new Project();
+$projects = $project->loadProjects();
+
+$len = count($projects);
+$i = 0;
+
+while ($i < $len){
+	$proj = $projects[$i];
+?>
+
+
+
+
+
+  <div class="col-sm-4 col-md-3">
+    <div class="thumbnail">
+    <div style = "width:100%; height:200px; background:url(donations/content/img/<?php echo $proj->getProjectImage()?>); background-size:cover">
+    
+     
+    </div>
+      <div class="caption">
+        <h3><?php echo $proj->getProjectName()?></h3>
+        <p style = "height:40px; overflow:hidden"><?php echo $proj->getDescription()?></p>
+        <p><a href="?page=discoverproject&open=<?php echo $proj->getId()?>" class="btn btn-success">Read more...</a></p>
+      </div>
+    </div>
+  </div>
+    
+  <?php 
+  $i++;
+  if ($i > 2){
+  	break;
+  }
+  }
+  ?>
+</div>
+
+
+
+</div>
+
+
+
+
